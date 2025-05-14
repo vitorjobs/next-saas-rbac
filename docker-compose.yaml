@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  next-saas:
+    image: bitnami/postgresql
+    ports:
+      # Forward de porta : Container/MáquinaLocal
+      - 5432:5433
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=next-saas
